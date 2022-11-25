@@ -1,0 +1,27 @@
+{%extends "base.html"%}
+
+{%block title%}KıvılcımBerrak{%endblock%}
+
+{%block content%}
+
+<div class="card" style=" margin-top: 10%; margin-left:10%; margin-right:10% ;">
+  <div class="card-body">
+    <h4 class="card-title" style="text-align:center;">LOGIN</h4>
+    <hr style="width=%50">
+  <div class="container">
+  <div class="d-flex justify-content-center align-items-center">
+    <form action="" method="POST">
+    <label for="uname">Email</label><br>
+    <input type="text" placeholder="Enter Email" name="email" required> <br>
+
+    <label for="psw">Password</label><br>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+    <hr style="width=%50">
+    <button class="btn btn-outline-dark" type="submit">Login</button><br>
+    </form>
+    </div>
+  </div>
+  </div>
+  </div>
+
+{%endblock%}

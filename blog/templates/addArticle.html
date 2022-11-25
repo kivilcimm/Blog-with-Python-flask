@@ -1,0 +1,32 @@
+{%extends "base.html"%}
+{% from "includes/formHelp.html" import render_field %}
+
+{%block title%}KıvılcımBerrak{%endblock%}
+
+{%block content%}
+
+<div class="card" style=" margin-left:10%; margin-right:10% ;">
+  <div class="card-body">
+    <h4 class="card-title" style="text-align:center;">NEW ARTICLE</h4>
+    <hr style="width=%50">
+      <div class="container">
+        <form method="POST">
+
+            {{ render_field(form.title ,class="form-control")}}
+            {{ render_field(form.author ,class="form-control")}}
+            {{ render_field(form.category ,class="form-control")}}
+            {{ render_field(form.about ,class="form-control")}}
+            {{ render_field(form.content ,class="form-control") }}
+
+           <div class="col-md-12 text-center">
+            <hr style="width=%50">
+            <button class="btn btn-outline-dark" type="submit" style="padding: 3px 3px;">
+                    Save</button><br>
+              </div>
+        </form>
+      </div>
+  </div>
+</div>
+
+
+{%endblock%}

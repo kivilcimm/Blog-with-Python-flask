@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home_KıvılcımBerrak{% endblock title%}
+
+{%block content%}
+
+{% if length > 1 %}
+  {% for article in articles %} 
+      {% if article.id != 1 %}
+          <div class="card" style="margin-left:10%; margin-right:10% ;">
+          <div class="card-body">
+            <h3 class="card-title" style="text-align:center;">{{article.name}}</h3>
+            <h6 class="card-subtitle mb-2 text-muted" style="text-align:center;">{{article.category}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted" style="text-align:center;">{{article.date}}</h6>
+            <hr size="7" style="width:50%; margin-left:25%; margin-right:25% ;" />
+            <p class="card-text" style="text-align:center;">{{article.about}}</p>
+            <div class="col-md-12 text-center">
+            <a href="/article/{{article.id}}" style="text-align:right; color:#17202a">To read the article...</a>
+             </div>
+          </div>
+          </div>
+          <hr size="7" style="width:50%; margin-left:25%; margin-right:25% ;" />
+      {% endif %}
+  {% endfor %}
+{% else %}
+<div class="alert alert-danger" style="text-align:center; margin-left:10%; margin-right:10% ;">
+          SORRY, There is no article in website!!</div>
+{% endif %}
+
+{%endblock content%}

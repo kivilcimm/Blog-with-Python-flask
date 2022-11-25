@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+{% from "includes/formHelp.html" import render_field %}
+
+{%block title%}KıvılcımBerrak{%endblock%}
+
+{%block content%}
+
+<div class="card" style=" margin-left:10%; margin-right:10% ;">
+  <div class="card-body">
+    <h4 class="card-title" style="text-align:center;">REGISTER</h4>
+    <h6 class="card-subtitle mb-2 text-muted" style="text-align:center;">Please enter your information!</h6>
+    <hr style="width=%50">
+      <div class="container">
+       <div class="d-flex justify-content-center align-items-center">
+       <form method="POST">
+    {{ render_field(form.name) }}
+
+    {{ render_field(form.surname) }}
+
+    {{ render_field(form.username) }}
+
+    {{ render_field(form.email) }}
+
+    {{ render_field(form.password) }}
+
+    {{ render_field(form.confirm) }}
+
+    <hr style="width=%50">
+     <div class="col-md-12 text-center">
+    <button class="btn btn-outline-dark" type="submit" style="padding: 3px 3px;">
+              Register</button><br>
+      </div>
+   </form>
+   </div>
+  </div>
+  </div>
+  </div>
+
+
+{%endblock%}
